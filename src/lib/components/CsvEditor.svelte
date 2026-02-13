@@ -12,9 +12,9 @@
   let headers = $state<string[]>([]); 
   let rows = $state<Row[]>([]); 
   let fileNameBase = $state(defaultFilename); 
-  let error = $state<string>(''); 
+  let error: string = $state(''); 
 
-  let query = $state('');
+  let query: string = $state('');
   
   function parseCsvText(csvText: string) { 
     error = ''; 
