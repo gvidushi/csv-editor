@@ -10,7 +10,7 @@
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "postbuild": "node scripts/generate-seo-files.js && node scripts/run-pagefind.js",
+    "postbuild": "node -e \"if(process.env.VERCEL){console.log('Skipping postbuild on Vercel');process.exit(0)}\" && node scripts/generate-seo-files.js && node scripts/run-pagefind.js",
     "preview:vite": "vite preview",
     "setup": "node postinstall.js",
     "test": "vitest run && npm run test:unit -- --run",
