@@ -1,5 +1,5 @@
 <script lang="ts">
-    import CsvEditor from '$lib/components/csvEditor.svelte';
+    import CsvEditor from '$lib/components/CsvEditor.svelte';
 </script>
 
 <CsvEditor />
