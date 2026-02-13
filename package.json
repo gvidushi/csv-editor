@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
+    "vercel-build": "npm run build",
     "build": "node ./node_modules/@sveltejs/kit/svelte-kit.js build",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync || echo ''",
@@ -62,10 +63,5 @@
   "dependencies": {
     "papaparse": "^5.5.3",
     "statue-ssg": "^0.2.18"
-  },
-  "scripts": {
-    "vercel-build": "npm run build",
-    "build": "node ./node_modules/@sveltejs/kit/svelte-kit.js build",
-    "prepare": "svelte-kit sync || echo ''"
   }
 }
