@@ -62,5 +62,10 @@
   "dependencies": {
     "papaparse": "^5.5.3",
     "statue-ssg": "^0.2.18"
+  },
+  "scripts": {
+    "vercel-build": "npm run build",
+    "build": "node ./node_modules/@sveltejs/kit/svelte-kit.js build",
+    "prepare": "svelte-kit sync || echo ''"
   }
 }
