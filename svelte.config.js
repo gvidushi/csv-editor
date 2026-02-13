@@ -19,14 +19,14 @@ const config = {
     },
     
     // Static site pre-processing options
-    prerender: {
-      crawl: true,
-      entries: [
-        '/',
-        '/about'
-      ],
-      handleHttpError: 'warn'
-    }
+    // prerender: {
+    //   crawl: true,
+    //   entries: [
+    //     '/',
+    //     '/about'
+    //   ],
+    //   handleHttpError: 'warn'
+    // }
   }
 };
 

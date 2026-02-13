@@ -11,7 +11,7 @@
   type Row = Record<string, string>
   let headers = $state<string[]>([]); 
   let rows = $state<Row[]>([]); 
-  let fileNameBase = $state(defaultFilename); 
+  let fileNameBase = $state(() => defaultFilename); 
   let error: string = $state(''); 
 
   let query: string = $state('');
