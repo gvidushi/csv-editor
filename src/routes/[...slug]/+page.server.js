@@ -1,7 +1,7 @@
 import { getContentByUrl, getContentDirectories, getSidebarTree } from 'statue-ssg/cms/content-processor';
 
 // Make this page pre-rendered as a static page
-export const prerender = true;
+export const prerender = false;
 
 /** @type {import('./$types').PageServerLoad} */
 export function load({ params }) {
@@ -38,7 +38,8 @@ export function load({ params }) {
   if (!content) {
     // Allow SvelteKit to handle routing
     // If a Svelte component exists, it will be shown, otherwise it will return 404
-    return { notFound: true, directories, sidebarItems };
+    // return { notFound: true, directories, sidebarItems };
+    throw error(404, 'Not found')
   }
 
   // Return content
